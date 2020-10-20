@@ -89,7 +89,6 @@ sum_wt += p[i].wait_t;
 }
 avg_tat = (float)sum_tat / n;
 avg_wt = (float)sum_wt / n;
-// Printing table
 cout<<"\nSNo\tAT\tBT\tCT\tTAT\tWT\n";
 for (i = 0; i < n; i++)
 cout<<p[i].index<<"\t"<<p[i].arr_t<<"\t"<<p[i].burst_t<<"\t"<<p[i].comp_t<<"\t"<<p[i].ta_t<<"\t"<<p[i].wait_t<<"\n";
