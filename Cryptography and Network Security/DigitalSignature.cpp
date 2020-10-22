@@ -1,26 +1,20 @@
-//7 3 hello 2 1
 #include<bits/stdc++.h>
 using namespace std;
-long long int power(long long int x, long long int y, long long int
-p)
+long long int power(long long int x, long long int y, long long int p)
 {
- long long int res = 1; // Initialize result
-
- x = x % p; // Update x if it is more than or
- // equal to p
-
+ long long int res = 1; 
+ x = x % p; 
  while (y > 0)
  {
- // If y is odd, multiply x with result
  if (y & 1)
  res = (res*x) % p;
 
- // y must be even now
  y = y>>1; // y = y/2
  x = (x*x) % p;
  }
  return res;
 }
+
 long long Hash(string S, int p)
 {
  long long hash = 1;
@@ -43,12 +37,8 @@ long long int modInverse(long long int a, long long int m)
 
  while (a > 1)
  {
- // q is quotient
  long long int q = a / m;
  long long int t = m;
-
- // m is remainder now, process same as
- // Euclid's algo
  m = a % m, a = t;
  t = y;
 
@@ -63,6 +53,8 @@ long long int modInverse(long long int a, long long int m)
 
  return x;
 }
+
+
 class DSA
 {
 private:
@@ -76,24 +68,27 @@ public:
 
 DSA::DSA(int P, int Q)
 {
- x = rand() % 100 + 1;
  p = P;
- q = Q;
+ q = Q;	
  g = power(2, (p-1)/q, p);
+ x = (rand() % (q-1)) + 1;
  y = power(g, x, p);
 }
+
 pair<long long int, long long int> DSA::sign(string s)
 {
  long long int r,s1 = 0,s2 = 0;
  do
  {
- r = rand() % q + 1;
+ r = (rand() % (q-1)) + 1;
  s1 = power(g, r, p) % q;
  long long k = modInverse(r, q);
  s2 = (k * (Hash(s, p) + x * s1)) % q;
  }while(s1 == 0 || s2 == 0);
+ 
  return make_pair(s1, s2);
 }
+
 bool DSA::verify(string s, pair<long long int, long long int> sign)
 {
  long long int h = Hash(s, p);
@@ -107,6 +102,7 @@ bool DSA::verify(string s, pair<long long int, long long int> sign)
  // cout << v << endl;
  return (abs(v) == sign.first);
 }
+
 int main()
 {
  long long int p, q;
