@@ -1,0 +1,27 @@
+<HTML>
+<BODY>
+<FORM id="myform" ALIGN="CENTER">
+<BR>
+<BR>
+<H1 STYLE="TEXT-ALIGN=CENTER">Finding Date in a String</H1>
+<BR>
+<BR>
+Enter the I String : &nbsp &nbsp<INPUT TYPE="text" id="name1">
+<BR>
+<BR>
+</FORM>
+<CENTER> &nbsp &nbsp &nbsp &nbsp <button onclick="outputname()">Find Dates</button></CENTER>
+<BR>
+<H2><P id="demo" ALIGN="CENTER">Output Date:
+</P></H2>
+<script>
+function outputname(){
+var x=document.getElementById("name1").value;
+var pattern=/([0][1-9]|[1][0-9]|[2][0-9]|[3][0-1])-([0][1-9]|[1][0-2])-\d\d\d\d/g;
+var result=x.match(pattern);
+var t="Dates found is/are :"+result;
+document.getElementById("demo").innerHTML=t;
+}
+</script>
+</BODY>
+</HTML>

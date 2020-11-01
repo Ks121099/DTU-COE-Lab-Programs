@@ -1,0 +1,37 @@
+<HTML>
+<BODY>
+<H1 STYLE="TEXT-ALIGN:CENTER">Whether input is String or Not?</H1>
+<BR>
+<BR>
+<BR>
+<BR>
+<FORM ID="myform" ALIGN="CENTER">
+Enter the String:<INPUT TYPE="text" id="number">
+<BR>
+</FORM>
+<CENTER>&nbsp &nbsp &nbsp &nbsp  <BUTTON onclick="myFunc()">Convert</BUTTON> </CENTER>
+<CENTER>
+<H2>
+<P id="demo"></P>
+</CENTER>
+</H2>
+<BR>
+<SCRIPT>
+function myFunc()
+{
+var x=document.getElementById("number").value;
+var res="";
+var t=x;
+res=res+isNaN(x);
+if(res=='true')
+{
+t=t+":is a string";
+}
+else{
+t=t+":is not a string";
+}
+document.getElementById("demo").innerHTML=t;
+}
+</SCRIPT>
+</BODY>
+</HTML>

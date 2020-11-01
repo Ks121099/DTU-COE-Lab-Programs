@@ -1,0 +1,24 @@
+<HTML>
+<SCRIPT>
+var x;
+function changecolour(){
+x=1;
+setInterval(change,5000);  //setInterval(function,milliseconds)
+}
+function change()
+{
+if(x==1)
+{
+color="red";
+x=2;
+}
+else{
+color="green";
+x=1;
+}
+document.body.style.background=color;
+}
+</SCRIPT>
+<BODY ONLOAD="changecolour()">
+</BODY>
+</HTML>

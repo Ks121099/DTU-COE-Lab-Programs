@@ -1,0 +1,55 @@
+<HTML>
+<BODY>
+<FORM id="myform" ALIGN="CENTER">
+<BR>
+<BR>
+<H1 STYLE="TEXT-ALIGN=CENTER">Binary,Hexadecimal,Octal Number</H1>
+<BR>
+<BR>
+Enter the Number : &nbsp &nbsp<INPUT TYPE="text" id="number1">
+<BR>
+</FORM>
+<CENTER> &nbsp &nbsp &nbsp &nbsp <button onclick="outputname()">Submit</button></CENTER>
+<BR>
+<H2><P id="demo" ALIGN="CENTER">
+</P></H2>
+<BR>
+<H2><P id="demo1" ALIGN="CENTER">
+</P></H2>
+<BR>
+<H2><P id="demo2" ALIGN="CENTER">
+</P></H2>
+<BR>
+<script>
+function outputname(){
+var y=document.getElementById("number1").value;
+var t="";
+var z=y;
+var a=parseInt(z);
+var p="Binary Number:"+a.toString(2);
+a=parseInt(z);
+var q="Octal Number:"+a.toString(8);
+a=parseInt(z);
+var r="Hexadecimal Number:"+a.toString(16);
+document.getElementById("demo").innerHTML=p;
+document.getElementById("demo1").innerHTML=q;
+document.getElementById("demo2").innerHTML=r;
+}
+</script>
+</BODY>
+</HTML>
+<SCRIPT>
+function myFunc()
+{
+var x=document.getElementById("myform").elements.item(0).value;
+//document.getElementById("demo").innerHTML;
+document.getElementById("demo").innerHTML=x.toString(16);
+    
+document.getElementById("demo1").innerHTML=x.toString(8);
+    
+document.getElementById("demo2").innerHTML=x.toString(2);
+} 
+</SCRIPT>
+
+</BODY>
+</HTML>

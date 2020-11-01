@@ -1,0 +1,37 @@
+<HTML>
+<BODY>
+<FORM NAME="myform" ALIGN="CENTER">
+<BR>
+<BR>
+<H1 STYLE="TEXT-ALIGN=CENTER">Count Number of Words</H1>
+<BR>
+<BR>
+<TEXTAREA id="my" COLS="80" ROWS="4" ALIGN=CENTER>
+Type the string for which you want to count number of words.
+</TEXTAREA>
+<BR>
+</FORM>
+<BR>
+<CENTER> &nbsp &nbsp <button onclick="outputname()">Count</button></CENTER>
+<BR>
+<H2><P id="demo" ALIGN="CENTER">
+</P></H2>
+<BR>
+<script>
+function outputname(){
+var y=document.getElementById("my").value;
+var x=y.trim();
+var z=x.split(" ");
+var count=0;
+for(var i=0;i<z.length;i++)
+{
+if(z[i]!="")
+{
+count++;
+}
+}
+document.getElementById("demo").innerHTML="The Number of words in the String are:"+count;
+}
+</script>
+</BODY>
+</HTML>

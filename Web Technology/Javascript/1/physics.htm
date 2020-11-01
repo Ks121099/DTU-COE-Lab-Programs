@@ -1,0 +1,60 @@
+<HTML>
+<BODY>
+<SCRIPT>
+function validate()
+{
+if(document.myform.name.value=="")
+{
+alert("Please provide your Name !");
+return false;
+}
+if(document.myform.address.value=="")
+{
+alert("Please provide your Address !");
+return false;
+}
+if(document.myform.age.value=="")
+{
+alert("Please provide your Age !");
+return false;
+}
+if(document.myform.name.subj=="")
+{
+alert("Please provide your Name !");
+return false;
+}
+}
+function agecheck()
+{
+if(document.myform.age.value<1 || document.myform.age.value>125)
+{
+alert("Reenter Age!"); 
+}
+
+}
+</SCRIPT>
+<BR>
+<BR>
+<CENTER><H1>FORM</H1>
+<BR>
+<BR>
+<BR>
+<FORM NAME="myform" method="post" onsubmit="return validate()">
+NAME: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<INPUT TYPE="text" NAME="name">
+<BR>
+<BR>
+ADDRESS: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<INPUT TYPE="text" NAME="address">
+<BR>
+<BR>
+AGE:  &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <INPUT TYPE="text" Name="age">
+<BR>
+<BR>
+FAVOURITE SUBJECT: &nbsp<INPUT TYPE="text" NAME="subj">
+<BR>
+<BR>
+&nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp
+ &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+<INPUT TYPE="Submit" value="Submit" onclick=agecheck()>
+</FORM>
+</BODY>
+</HTML>

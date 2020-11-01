@@ -1,0 +1,51 @@
+<HTML>
+<BODY>
+<FORM id="myform" ALIGN="CENTER">
+<BR>
+<BR>
+<H1 STYLE="TEXT-ALIGN=CENTER">Inserting String in a String</H1>
+<BR>
+<BR>
+Enter the I String : &nbsp &nbsp<INPUT TYPE="text" id="name1">
+<BR>
+<BR>
+Enter the II String : &nbsp &nbsp<INPUT TYPE="text" id="name2">
+<BR>
+<BR>
+Enter the position : &nbsp &nbsp<INPUT TYPE="text" id="pos">
+<BR>
+</FORM>
+<CENTER> &nbsp &nbsp &nbsp &nbsp <button onclick="outputname()">Submit</button></CENTER>
+<BR>
+<H2><P id="demo" ALIGN="CENTER">Output String:
+</P></H2>
+<script>
+function outputname(){
+var x=document.getElementById("name1").value;
+var y=document.getElementById("name2").value;
+var z=document.getElementById("pos").value;
+var t="";
+var j=0;
+if(z>x.length || z<0)
+{
+t=x+y;
+}
+else{
+for(j=0;j<z;j++)
+{
+t=t+x[j];
+}
+for(var i=0;i<y.length;i++)
+{
+t=t+y[i];
+}
+for(var i=j;i<x.length;i++)
+{
+t=t+x[i];
+}
+}
+document.getElementById("demo").innerHTML=t;
+}
+</script>
+</BODY>
+</HTML>

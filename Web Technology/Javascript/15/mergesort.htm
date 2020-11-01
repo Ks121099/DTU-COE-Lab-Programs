@@ -1,0 +1,94 @@
+<HTML>
+<BODY>
+<FORM id="myform" ALIGN="CENTER">
+<BR>
+<BR>
+<H1 STYLE="TEXT-ALIGN=CENTER">Merge Sort</H1>
+<BR>
+<BR>
+Enter the Array : &nbsp &nbsp<INPUT TYPE="text" id="name1">
+<BR>
+<BR>
+</FORM>
+<CENTER> &nbsp &nbsp &nbsp &nbsp <button onclick="outputname()">Sort</button></CENTER>
+<BR>
+<H2><P id="demo" ALIGN="CENTER">
+</P></H2>
+<script>
+function outputname(){
+var x=document.getElementById("name1").value;
+var y=x.split(" ");
+var ar=[];
+for(var i=0;i<y.length;i++)
+{
+ar.push(parseInt(y[i]));
+}
+mergeSort(ar,0,ar.length-1);
+var result=ar.join(' ');
+var result1="Sorted Array:"+result;
+document.getElementById("demo").innerHTML=result1;
+}
+function mergeSort(ar,l,r)
+{
+ if(l<r)
+ {
+  var m=Math.floor((l+r)/2);
+  mergeSort(ar,l,m);
+  mergeSort(ar,m+1,r);
+  merge(ar,l,m,r);
+
+ }
+}
+function merge(ar,l,m,r)
+{
+ var i,j,k;
+ var n1=m-l+1;
+ var n2=r-m;
+
+ var L=[];
+ var R=[];
+ for(i=0;i<n1;i++)
+ {
+  L.push(ar[i+l]);
+ }
+ for(j=0;j<n2;j++)
+ {
+  R.push(ar[j+m+1]);
+ }
+ i=0;
+ j=0;
+ k=l;
+ while(i<n1 && j<n2)
+ {
+   if(L[i]<=R[j])
+   {
+    ar[k]=L[i];
+    i++;
+    k++;
+   }
+   else
+   {
+    ar[k]=R[j];
+    j++;
+    k++;
+   }
+
+ }
+ while(i<n1)
+ {
+  ar[k]=L[i];
+  i++;
+  k++;
+ }
+ while(j<n2)
+ {
+  ar[k]=R[j];
+  j++;
+  k++;
+ }
+
+}
+
+</script>
+</BODY>
+</HTML>

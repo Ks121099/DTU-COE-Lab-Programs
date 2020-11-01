@@ -1,0 +1,55 @@
+<HTML>
+<BODY>
+<CENTER>
+<H1 STYLE=COLOR:RED>
+Higgs Boson
+</H1>
+<BR>
+<BR>
+<BR>
+<BR>
+</CENTER>
+<P id="demo" onmouseenter="mouseenter()" onmouseleave="mouseleave()">The Higgs boson is an elementary particle in the Standard Model of particle physics. It is the quantum excitation of the Higgs field,a fundamental field of crucial importance to particle physics theory first suspected to exist in the 1960s. Unlike other known fields such as the electromagnetic field, it has a non-zero constant value in vacuum. The question of the Higgs field's existence has been the last unverified part of the Standard Model of particle physics and, according to some, "the central problem in particle physics".
+The presence of the field, now confirmed by experimental investigation, explains why some fundamental particles have mass when, based on the symmetries controlling their interactions, they should be massless. The existence of the Higgs field would also resolve several other long-standing puzzles, such as the reason for the weak force's extremely short range.
+Although it is hypothesised that the Higgs field permeates the entire Universe, evidence for its existence has been very difficult to obtain. In principle, the Higgs field can be detected through its excitations, manifested as Higgs particles, but these are extremely difficult to produce and detect. The importance of this fundamental question led to a 40 year search, and the construction of one of the world's most expensive and complex experimental facilities to date, CERN's Large Hadron Collider, in an attempt to create Higgs bosons and other particles for observation and study. On 4 July 2012, the discovery of a new particle with a mass between 125 and 127 GeV/c2 was announced; physicists suspected that it was the Higgs boson.Since then, the particle has been shown to behave, interact, and decay in many of the ways predicted by the Standard Model. It was also tentatively confirmed to have even parity and zero spin,two fundamental attributes of a Higgs boson. This appears to be the first elementary scalar particle discovered in nature. More studies are needed to verify that the discovered particle has properties matching those predicted for the Higgs boson by the Standard Model, or whether, as predicted by some theories, multiple Higgs bosons exist.
+</P>
+<BR>
+<CENTER>
+<button onclick="clickB()" >Bold</button>
+&nbsp &nbsp
+<button onclick="clickI()">Italic</button>
+&nbsp &nbsp
+<button onclick="clickU()">Underline</button>
+&nbsp &nbsp
+<button onclick="clickN()">Normal</button>
+</CENTER>
+<script>
+
+function clickN()
+{
+document.getElementById("demo").style.fontWeight='normal';
+}
+function clickB()
+{
+document.getElementById("demo").style.fontWeight='bold';
+}
+function clickI()
+{
+document.getElementById("demo").style.fontStyle='italic';
+}
+function clickU()
+{
+document.getElementById("demo").style.textDecoration='underline';
+}
+function mouseenter()
+{
+document.getElementById("demo").style.color="green";
+}
+function mouseleave()
+{
+document.getElementById("demo").style.color="blue";
+}
+
+</script>
+</BODY>
+</HTML>
